@@ -98,8 +98,8 @@ class Postgis < Formula
     bin.install Dir["stage/**/bin/*"]
     lib.install Dir["stage/**/lib/*"]
     include.install Dir["stage/**/include/*"]
-    (doc/"postgresql/extension").install Dir["stage/**/share/doc/postgresql/extension/*"]
-    (share/"postgresql/extension").install Dir["stage/**/share/postgresql/extension/*"]
+    (doc/"postgresql@9.6.6/extension").install Dir["stage/**/share/doc/postgresql/extension/*"]
+    (share/"postgresql@9.6.6/extension").install Dir["stage/**/share/postgresql/extension/*"]
     pkgshare.install Dir["stage/**/contrib/postgis-*/*"]
     (share/"postgis_topology").install Dir["stage/**/contrib/postgis_topology-*/*"]
 
