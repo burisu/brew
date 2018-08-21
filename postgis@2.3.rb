@@ -1,5 +1,5 @@
 class PostgisAT23 < Formula
-  desc "Adds support for geographic objects to PostgreSQL"
+  desc "Adds support for geographic objects to PostgreSQL 9.6.6"
   homepage "https://postgis.net/"
   url "https://download.osgeo.org/postgis/source/postgis-2.3.7.tar.gz"
   sha256 "bb3c39d42dc11188a14163add84ed8372d337dc5b345fac1a48b9ec97d0a8456"
@@ -60,7 +60,7 @@ class PostgisAT23 < Formula
     args = [
       "--with-projdir=#{Formula["proj"].opt_prefix}",
       "--with-jsondir=#{Formula["json-c"].opt_prefix}",
-      "--with-pgconfig=#{Formula["postgresql"].opt_bin}/pg_config",
+      "--with-pgconfig=#{Formula["burisu/burisu/postgresql@9.6.6"].opt_bin}/pg_config",
       # Unfortunately, NLS support causes all kinds of headaches because
       # PostGIS gets all of its compiler flags from the PGXS makefiles. This
       # makes it nigh impossible to tell the buildsystem where our keg-only
