@@ -5,12 +5,12 @@ class Postgis < Formula
   sha256 "0663efb589210d5048d95c817e5cf29552ec8180e16d4c6ef56c94255faca8c2"
   revision 1
 
-  bottle do
-    cellar :any
-    sha256 "39ca73e792f68197d9c7543300cfea6a36326c4ced5ac5b1f46484dbffad8fd2" => :high_sierra
-    sha256 "7d4bb0d80a5a7221815514b10781d021901b489cb405b02b0d0975661ea0a348" => :sierra
-    sha256 "2bb8047b0735acf4bec62f60aad084cf7b32a1e426d7def2dc00d8591030f46d" => :el_capitan
-  end
+  # bottle do
+  #   cellar :any
+  #   sha256 "39ca73e792f68197d9c7543300cfea6a36326c4ced5ac5b1f46484dbffad8fd2" => :high_sierra
+  #   sha256 "7d4bb0d80a5a7221815514b10781d021901b489cb405b02b0d0975661ea0a348" => :sierra
+  #   sha256 "2bb8047b0735acf4bec62f60aad084cf7b32a1e426d7def2dc00d8591030f46d" => :el_capitan
+  # end
 
   head do
     url "https://svn.osgeo.org/postgis/trunk/"
@@ -132,7 +132,7 @@ class Postgis < Formula
       PostGIS plugin libraries installed to:
         #{HOMEBREW_PREFIX}/lib
       PostGIS extension modules installed to:
-        #{HOMEBREW_PREFIX}/share/postgresql/extension
+        #{HOMEBREW_PREFIX}/share/postgresql@9.6.6/extension
     EOS
   end
 
